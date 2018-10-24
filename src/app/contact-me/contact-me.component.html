@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div *ngIf="emailSend == false" class="formBody">
+  <form [formGroup]="mailEdit">
+    <h2 class="form-title">Get in Touch</h2>
+    <input formControlName="name" type="text" class="feedback-input" placeholder="Name" required />
+    <input formControlName="email" type="text" class="feedback-input" placeholder="Email" required />
+    <input formControlName="title" type="text" class="feedback-input" placeholder="Title" required />
+    <textarea formControlName="content" class="feedback-input" placeholder="Comment" required></textarea>
+    <input type="submit" value="SUBMIT" (click)="sendMailHandler()" [disabled]="!mailEdit.valid" />
+  </form>
+</div>
+
+<div class="emailSent" *ngIf="emailSend == true">
+  <h4>Your message was sent successfully </h4>
+  <a class="sendAnotherOne green-text" (click)="changeStatus(false)">Send another one!</a>
+</div>
