@@ -1,0 +1,28 @@
+.skills i {
+  padding-right: 15%;
+  padding-bottom: 5%;
+  font-size: 100px;
+  box-sizing: border-box;
+}
+
+.skills .container p {
+  font-size: 23px;
+  display: inline;
+}
+
+.skills img {
+  height: 100px;
+  padding-right: 10%;
+}
+
+.skills {
+  box-sizing: border-box;
+}
+.section-dark{
+    /* background-color: #282e34; */
+    color:#ddd;
+    margin-left: 15%;
+}
+.git{
+    margin-left: 33%;
+}

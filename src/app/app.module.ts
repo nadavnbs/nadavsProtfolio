@@ -6,10 +6,8 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
-import { ContactDealogComponent } from './contact-dealog/contact-dealog.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module'
 
@@ -17,10 +15,8 @@ import { AppRoutingModule } from './app-routing.module'
   declarations: [
     AppComponent,
     HomeComponent,
-    MyProjectsComponent,
     MySkillsComponent,
     ContactMeComponent,
-    ContactDealogComponent,
     HeaderComponent
   ],
   imports: [
