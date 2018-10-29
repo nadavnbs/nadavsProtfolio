@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-app.use(express.static(path.join(__dirname, 'dist/nadavsProtfolio')));
+app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.post('/sendEmail', (req, res) => {
@@ -50,7 +50,7 @@ app.post('/sendEmail', (req, res) => {
 
 });
 app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname,'dist/nadavsProtfolio/index.html'))
+  res.sendFile(path.join(__dirname,'dist/nadavsProtfolio'))
 });
 
 app.use(function(err,req,res,next){
