@@ -11,10 +11,10 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist/nadavsProtfolio')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
-app.post('/', (req, res) => {
+app.post('/sendEmail', (req, res) => {
 
   var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -50,7 +50,7 @@ app.post('/', (req, res) => {
 
 });
 app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname,'dist/nadavsProtfolio'))
+  res.sendFile(path.join(__dirname,'dist/nadavsProtfolio/index.html'))
 });
 
 app.use(function(err,req,res,next){
