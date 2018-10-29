@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['skills'])
   }
   goToContect(){
-    this.router.navigate(['contact'])
+    this.router.navigate(['sendEmail'])
   }
 
 }
