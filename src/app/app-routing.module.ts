@@ -7,7 +7,7 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
 
 const routs:Routes = [
   {path:'skills',component:MySkillsComponent},
-  {path:'contact',component:ContactMeComponent},
+  {path:'sendEmail',component:ContactMeComponent},
   {path:'',component:HomeComponent}
 ]
 @NgModule({
