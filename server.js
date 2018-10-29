@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(path.join(__dirname, 'dist/nadavsProtfolio')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
-app.post('/sendEmail', (req, res) => {
+app.post('/', (req, res) => {
 
   var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -29,7 +29,7 @@ app.post('/sendEmail', (req, res) => {
     to: "nadavnbs.dev@gmail.com",
     subject: req.body.title,
     html: '<h2>' + req.body.title + '</h2>' +
-      '<p>' + req.body.text + '</p>' +
+      '<p>' + req.body.content + '</p>' +
       '<p><b>Name: </b>' + req.body.name + '<p>' +
       '<p><b>Email: </b>' + req.body.email + '<p>'
 
