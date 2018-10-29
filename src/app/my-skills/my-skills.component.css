@@ -18,11 +18,19 @@
 .skills {
   box-sizing: border-box;
 }
-.section-dark{
-    /* background-color: #282e34; */
-    color:#ddd;
-    margin-left: 15%;
+
+.section-dark {
+  color: #ddd;
 }
-.git{
-    margin-left: 33%;
+
+/* .git {
+  margin-left: 33%;
+} */
+
+.container {
+  background: rgba(256, 256, 256, 0.5);
+  text-align: center;
+  border: 3px solid white;
+  box-shadow: 0 0 25px;
+  border-radius: 25px;
 }
