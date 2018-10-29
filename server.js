@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
-app.post('/sendEmail', (req, res) => {
+app.post('/', (req, res) => {
 
   var transporter = nodemailer.createTransport({
     service: 'gmail',
