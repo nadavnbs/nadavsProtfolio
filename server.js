@@ -51,7 +51,7 @@ app.post('/sendEmail', (req, res) => {
 
 });
 app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname,'dist/nadavsProtfolio/index.html'))
+  res.sendFile(path.join(__dirname,'dist/nadavsProtfolio'))
 });
 
 app.use(function(err,req,res,next){
