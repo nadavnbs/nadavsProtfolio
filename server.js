@@ -3,7 +3,6 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const config = require('../../secrets')
 
 const app = express();
 
@@ -20,14 +19,14 @@ app.post('/sendEmail', (req, res) => {
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: config.emailAddress,
-      pass: config.emailPassword
+      user: "nadavnbs.dev@gmail.com",
+      pass: "nadav1234"
     }
   });
 
   var mailOptions = {
     from: req.body.name,
-    to: 'nadavnbs@gmail.com',
+    to: "nadavnbs.dev@gmail.com",
     subject: req.body.title,
     html: '<h2>' + req.body.title + '</h2>' +
       '<p>' + req.body.text + '</p>' +
